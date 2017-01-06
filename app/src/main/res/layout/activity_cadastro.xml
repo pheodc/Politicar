@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cadastro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_politicar"
+    tools:context="android.politicar.com.br.politicar.Activitys.CadastroActivity">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/efeito_arrow"
+        android:layout_margin="6dp"
+        android:onClick="voltarLogin"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_img"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/img_topo_politicar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView_foto" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Adicionar uma Foto"
+            android:id="@+id/buttonadicionaFoto"
+            android:textSize="8sp"
+            android:textColor="#fff"
+            android:background="#666666"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imageView_foto"
+            android:onClick="adicionaImagem"
+
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width = "match_parent"
+        android:id="@+id/lineOne"
+        android:layout_height="2dp"
+        android:background="#A9A9A9"
+        android:elevation="3dp"
+        android:layout_below="@+id/layout_img">
+
+    </View>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineOne"
+        android:fillViewport="true"
+
+        android:id="@+id/scrollCadastro"
+        android:layout_above="@+id/buttonCadastrar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearPessoal"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/relativePessoais">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome:"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/account_box_politicar"
+                    android:layout_marginLeft="10dp"/>
+                <EditText
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editNome"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Digite seu nome Completo:"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="textPersonName" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data de Nascimento:"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/calendar_range_politicar"
+                    android:layout_marginLeft="10dp"/>
+                <EditText
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editNascimento"
+                    android:layout_marginLeft="10dp"
+                    android:hint="Diga-nos seu Aniversário:"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genero:"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/human_male_female"
+                    android:layout_marginLeft="10dp"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:id="@+id/editGenero"
+
+                    android:layout_marginLeft="10dp"
+
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+
+                    android:inputType="text" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:id="@+id/relativeConta"
+                android:elevation="3dp"
+                android:layout_below="@+id/linearPessoal"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dados da Conta"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:layout_margin="2dp"
+                    android:textStyle="normal|bold" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearConta"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/relativeConta">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login:"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/account_card_details"
+                    android:layout_marginLeft="10dp"/>
+                <EditText
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editLogin"
+                    android:layout_marginLeft="10dp"
+
+                    android:hint="Digite um Apelido ou seu E-mail:"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+
+                    android:inputType="textEmailAddress" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senha:"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/security"
+                    android:layout_marginLeft="10dp"/>
+                <EditText
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editSenha"
+                    android:layout_marginLeft="10dp"
+
+                    android:hint="Esqueça o 123, digite uma senha forte:"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="5dp"
+
+                    android:inputType="textPassword" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirma Senha:"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/verified"
+                    android:layout_marginLeft="10dp"
+                    />
+                <EditText
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editconfirmaSenha"
+                    android:layout_marginLeft="10dp"
+
+                    android:hint="Repita sua Senha:"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:id="@+id/relativePessoais"
+                android:elevation="3dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dados Pessoais"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:layout_margin="2dp"
+                    android:textStyle="normal|bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonCadastrar"
+        android:text="CADASTRAR"
+        android:textColor="#fff"
+        android:background="@drawable/efeito_button"
+        android:onClick="cadastrarUsuario"
+        android:textStyle="normal|bold" />
+</RelativeLayout>
