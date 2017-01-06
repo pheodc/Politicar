@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_politicar_certo"
+    tools:context="android.politicar.com.br.politicar.Activitys.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLogin"
+        android:orientation="vertical"
+        android:background="#DCDCDC"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="80dp"
+        android:elevation="6dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginLeft="12dp"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editLogin"
+            android:background="@drawable/campo_login"
+            android:hint="Digite Seu Login:"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senha:"
+            android:layout_marginLeft="12dp"
+            android:textStyle="normal|bold"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSenha"
+            android:background="@drawable/campo_login"
+            android:hint="Digite Sua Senha:"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="textPassword" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonEntrar"
+            android:text="Entrar"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/efeito_button"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp"
+            android:onClick="validaLogin"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/buttonesqueciSenha"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearLogin"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:text="Esqueci Minha Senha"
+        android:textSize="10sp"
+        android:background="#999999"
+        android:textColor="@android:color/background_light"
+        android:onClick="abriresqueciSenha"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo_politicar"
+        android:id="@+id/logoPoliticar"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="6dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vamos Politicar?"
+        android:layout_below="@+id/buttonesqueciSenha"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="normal|bold" />
+    <View
+        android:layout_width = "match_parent"
+        android:id="@+id/lineOne"
+        android:layout_height="2dp"
+        android:background="#A9A9A9"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/buttonesqueciSenha"
+        >
+    </View>
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btnFbLogin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/lineOne"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/buttonCadastro"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Cadastrar-se"
+        android:layout_weight="1"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:background="#808080"
+        android:textColor="#fff"
+        android:onClick="abrirCadastro"
+        android:layout_below="@+id/btnFbLogin"
+        />
+</RelativeLayout>
