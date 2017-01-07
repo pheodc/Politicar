@@ -16,6 +16,7 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.login.widget.LoginButton;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class LoginActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText login;
     EditText senha;
     HashMap<String, String> params;
-
+    LoginButton loginButton;
     int idUsuario;
     String URL = "http://52.40.192.10/Politicar/loginPoliticar.php";
     CarregaDadosWS carregaDados;
@@ -48,6 +49,9 @@ public class LoginActivity extends AppCompatActivity {
 
         login = (EditText) findViewById(R.id.editLogin);
         senha = (EditText) findViewById(R.id.editSenha);
+
+        loginButton = (LoginButton) findViewById(R.id.btnFbLogin);
+        loginButton.setReadPermissions(Arrays.asList("public_profile","email", "user_birthday"));
 
     }
 
